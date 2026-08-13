@@ -21,7 +21,7 @@ function Filter({
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        {/* Search */}
+       
         <input
           type="text"
           placeholder="Search expenses..."
@@ -30,7 +30,7 @@ function Filter({
           className="border border-gray-300 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-blue-500"
         />
 
-        {/* Category */}
+        
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
@@ -43,7 +43,7 @@ function Filter({
           <option value="Others">Others</option>
         </select>
 
-        {/* Date */}
+        
         <input
           type="date"
           value={date}
@@ -51,7 +51,7 @@ function Filter({
           className="border border-gray-300 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-blue-500"
         />
 
-        {/* Minimum Amount */}
+       
         <input
           type="number"
           placeholder="Minimum amount"
@@ -60,16 +60,16 @@ function Filter({
           className="border border-gray-300 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-blue-500"
         />
 
-        {/* Maximum Amount */}
+        
         <input
           type="number"
           placeholder="Maximum amount"
           value={maxAmount}
           onChange={(e) => setMaxAmount(e.target.value)}
           className="border border-gray-300 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-        />
+        />  
 
-        {/* Sort */}
+
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
@@ -84,7 +84,6 @@ function Filter({
           </option>
         </select>
 
-        {/* Clear */}
         <button
           onClick={onClear}
           className="bg-gray-800 text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition"

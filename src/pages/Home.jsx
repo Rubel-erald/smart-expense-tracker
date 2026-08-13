@@ -145,7 +145,7 @@ function Home() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
 
-        {/* Header */}
+        
         <div className="mb-6">
           <p className="text-sm text-gray-500">
             Manage your daily spending
@@ -156,20 +156,20 @@ function Home() {
           </h2>
         </div>
 
-        {/* Summary */}
+        
         <Summary expenses={expenses} />
 
-        {/* Chart */}
+        
         <ExpenseChart expenses={expenses} />
 
-        {/* Add Expense */}
+       
         <ExpenseForm
           onAddExpense={addExpense}
           editingExpense={editingExpense}
           onUpdateExpense={updateExpense}
         />
 
-        {/* Filters */}
+        
         <Filter
           category={category}
           setCategory={setCategory}
@@ -186,7 +186,7 @@ function Home() {
           onClear={clearFilters}
         />
 
-        {/* Expense List */}
+        
         <ExpenseList
           expenses={filteredExpenses}
           onDelete={deleteExpense}
