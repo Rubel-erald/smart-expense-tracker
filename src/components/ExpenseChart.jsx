@@ -4,6 +4,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  Cell,
 } from "recharts"
 
 function ExpenseChart({ expenses }) {
@@ -23,8 +24,15 @@ function ExpenseChart({ expenses }) {
     })
   )
 
+  const categoryColors = {
+    Food: "#3B82F6",
+    Travel: "#22C55E",
+    Bills: "#F59E0B",
+    Others: "#EF4444",
+  }
+
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 mt-6">
+    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mt-6">
       <h2 className="text-xl font-bold text-gray-800 mb-5">
         Category-wise Spending
       </h2>
@@ -45,7 +53,16 @@ function ExpenseChart({ expenses }) {
                 cy="50%"
                 outerRadius={120}
                 label
-              />
+              >
+                {chartData.map((entry) => (
+                  <Cell
+                    key={entry.category}
+                    fill={
+                      categoryColors[entry.category]
+                    }
+                  />
+                ))}
+              </Pie>
 
               <Tooltip />
 
